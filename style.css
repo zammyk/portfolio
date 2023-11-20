@@ -4,9 +4,10 @@ html, body {
 }
 
 .section {
-    min-height: 100%;
-    width: 100%;
+    min-height: calc(100% - 8rem);
+    width: calc(100% - 8rem);
     display: flex;
+    padding: 4rem;
 }
 
 #about {
@@ -19,4 +20,19 @@ html, body {
 
 #contact {
     background-color: blue;
+}
+
+.links-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.about .links-container img {
+    height: 2rem;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
 }
