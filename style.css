@@ -38,8 +38,9 @@ html, body {
     margin-left: auto;
 }
 
-.about .links-container img {
+.links-container img {
     height: 2rem;
+    align-self: center;
 }
 
 .responsive {
