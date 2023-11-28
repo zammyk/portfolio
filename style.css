@@ -5,12 +5,11 @@
 }
 
 html, body { 
-    margin:0px;
-    height:100%;
+    margin: 0px;
+    height: 100%;
 }
 
 .section {
-    min-height: calc(100% - 8rem);
     width: calc(100% - 8rem);
     display: flex;
     padding: 4rem;
@@ -19,11 +18,13 @@ html, body {
 }
 
 #about {
+    height: calc(100% - 8rem);
     background-color: white;
 }
 
 #projects {
-    background-color: gray;
+    background-color: white;
+    flex-direction: column;
 }
 
 #contact {
@@ -34,6 +35,7 @@ html, body {
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
+    margin-left: auto;
 }
 
 .about .links-container img {
@@ -49,9 +51,51 @@ html, body {
     position: absolute;
     /* transform: translateX(-4rem) translateY(-4rem); */
     left: 0rem;
+    top: 0;
     height: 100vh;
     width: 100vw;
     background-image: linear-gradient(to bottom right,var(--tw-gradient-stops));
     clip-path: polygon(0% 0%,100% 0%,100% 50%,0% 100%);
     z-index: -1;
+}
+
+.about {
+    background-color: white;
+    padding: 3rem;
+    box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* End of About Section */
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    row-gap: 3rem;
+}
+
+.project-container .card:nth-child(3n+2) {
+    margin: 0 auto;
+}
+
+.project-container .card:nth-child(3n+3) {
+    margin-left: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 95%;
+}
+
+.card > *:not(img) {
+    padding: 0 1rem;
+}
+.card .title {
+    display: flex;
+}
+
+.description {
+    margin-bottom: 1rem;
 }
