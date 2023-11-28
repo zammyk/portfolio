@@ -36,6 +36,7 @@ html, body {
     justify-content: flex-end;
     gap: 1rem;
     margin-left: auto;
+    align-self: center;
 }
 
 .links-container img {
